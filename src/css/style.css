@@ -766,7 +766,7 @@
 	#header
 	{
 		position: relative;
-		/*background: url(../images/header.jpg) no-repeat bottom center;*/
+		/* background: url(../images/header.jpg) no-repeat bottom center; */
 		background-position: bottom center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;

@@ -5,14 +5,15 @@ const contentstack = require('contentstack-metalsmith');
 const entry_hooks = require('./hooks/entry-hooks');
 const post_hooks = require('./hooks/post-hooks');
 const permalinks = require('metalsmith-permalinks');
+const serve = require('metalsmith-serve');
 
 Metalsmith(__dirname)
   .source('src')
   .destination('build')
   .clean(true)
   .use(contentstack({
-    api_key: 'bltfb55a06b38ea7503',
-    access_token: 'blt2fa100560e76c485',
+    api_key: 'blta9e76a1f2ce5900a',
+    access_token: 'bltc18b279cfd06e57f',
     environment: process.env.NODE_ENV || 'development',
     partials: ['header', 'footer'],
     entryHooks: {
@@ -32,6 +33,10 @@ Metalsmith(__dirname)
     partials: 'partials'
   }))
   .use(permalinks())
+  .use(serve({
+    port: 8081,
+    verbose: true,
+  }))
   .build(function (err) {
     if (err) throw err
     console.log('Static site built successfully');
