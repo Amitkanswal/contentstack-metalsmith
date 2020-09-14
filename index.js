@@ -33,7 +33,16 @@ Metalsmith(__dirname)
     partials: 'partials'
   }))
   .use(permalinks())
-  .use(serve())
+  .use(serve({
+    verbose: true,
+    http_error_files: {
+      404: "/404.html"
+    },
+    redirects: {
+      '/old_url.php'        : '/new_url/',
+      '/old_url.php?lang=en': '/en/new_url/'
+    }
+  }))
   .build(function (err) {
     if (err) throw err
     console.log('Static site built successfully');
