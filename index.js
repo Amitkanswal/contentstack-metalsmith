@@ -34,6 +34,7 @@ Metalsmith(__dirname)
   }))
   .use(permalinks())
   .use(serve({
+    port: process.env.PORT,
     verbose: true,
     http_error_files: {
       404: "/404.html"
