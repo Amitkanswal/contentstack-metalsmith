@@ -5,7 +5,7 @@ const contentstack = require('contentstack-metalsmith');
 const entry_hooks = require('./hooks/entry-hooks');
 const post_hooks = require('./hooks/post-hooks');
 const permalinks = require('metalsmith-permalinks');
-const serve = require('metalsmith-serve');
+// const serve = require('metalsmith-serve');
 
 Metalsmith(__dirname)
   .source('src')
@@ -33,17 +33,17 @@ Metalsmith(__dirname)
     partials: 'partials'
   }))
   .use(permalinks())
-  .use(serve({
-    port: process.env.PORT,
-    verbose: true,
-    http_error_files: {
-      404: "/404.html"
-    },
-    redirects: {
-      '/old_url.php'        : '/new_url/',
-      '/old_url.php?lang=en': '/en/new_url/'
-    }
-  }))
+  // .use(serve({
+  //   port: process.env.PORT,
+  //   verbose: true,
+  //   http_error_files: {
+  //     404: "/404.html"
+  //   },
+  //   redirects: {
+  //     '/old_url.php'        : '/new_url/',
+  //     '/old_url.php?lang=en': '/en/new_url/'
+  //   }
+  // }))
   .build(function (err) {
     console.log(err);
     if (err) throw err
