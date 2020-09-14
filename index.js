@@ -12,7 +12,7 @@ Metalsmith(__dirname)
   .clean(true)
   .use(contentstack({
     api_key: 'bltfb55a06b38ea7503',
-    access_token: 'cs89f70191b622f22eb42d172c',
+    access_token: 'blt2fa100560e76c485',
     environment: process.env.NODE_ENV || 'development',
     partials: ['header', 'footer'],
     entryHooks: {
