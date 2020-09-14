@@ -5,7 +5,6 @@ const contentstack = require('contentstack-metalsmith');
 const entry_hooks = require('./hooks/entry-hooks');
 const post_hooks = require('./hooks/post-hooks');
 const permalinks = require('metalsmith-permalinks');
-const serve = require('metalsmith-serve');
 
 Metalsmith(__dirname)
   .source('src')
@@ -33,10 +32,6 @@ Metalsmith(__dirname)
     partials: 'partials'
   }))
   .use(permalinks())
-  .use(serve({
-    port: 8081,
-    verbose: true,
-  }))
   .build(function (err) {
     if (err) throw err
     console.log('Static site built successfully');

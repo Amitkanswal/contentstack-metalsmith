@@ -17,7 +17,6 @@ function fetchProducts(currFile, files, options) {
 		if(file === true)
 			return file;
 		const fileNames = _.keys(file);
-		console.log(fileNames,currFile);
 		fileNames.forEach(fileName => {
 			// file[fileName] won't have entries option if its an entry_template file!
 			if(file[fileName] && file[fileName].contentstack && file[fileName].contentstack.content_type === "products" && file[fileName].entries) {
