@@ -44,6 +44,7 @@ Metalsmith(__dirname)
     }
   }))
   .build(function (err) {
+    console.log(err);
     if (err) throw err
     console.log('Static site built successfully');
   })
