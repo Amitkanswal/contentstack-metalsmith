@@ -11,8 +11,8 @@ Metalsmith(__dirname)
   .destination('build')
   .clean(true)
   .use(contentstack({
-    api_key: '',
-    access_token: '',
+    api_key: 'bltfb55a06b38ea7503',
+    access_token: 'cs89f70191b622f22eb42d172c',
     environment: process.env.NODE_ENV || 'development',
     partials: ['header', 'footer'],
     entryHooks: {

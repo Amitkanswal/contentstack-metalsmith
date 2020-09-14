@@ -1,0 +1,59 @@
+{
+  "title": "About us",
+  "uid": "about_us",
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "display_name": "Title",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true
+      },
+      "multiple": false
+    },
+    {
+      "display_name": "URL",
+      "uid": "url",
+      "data_type": "text",
+      "mandatory": true,
+      "field_metadata": {
+        "_default": true
+      },
+      "multiple": false,
+      "unique": false
+    },
+    {
+      "data_type": "text",
+      "display_name": "Description",
+      "uid": "description",
+      "field_metadata": {
+        "allow_rich_text": true,
+        "description": "",
+        "multiline": false,
+        "rich_text_type": "advanced"
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false
+    }
+  ],
+  "maintain_revisions": true,
+  "description": "",
+  "options": {
+    "is_page": true,
+    "singleton": true,
+    "title": "title",
+    "sub_title": []
+  },
+  "abilities": {
+    "get_one_object": true,
+    "get_all_objects": true,
+    "create_object": true,
+    "update_object": true,
+    "delete_object": true,
+    "delete_all_objects": true
+  }
+}
